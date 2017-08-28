@@ -31,15 +31,7 @@ class ViewController: UIViewController {
     
     // it's easier if we put all code that updates view in one method
     func updateUI() {
-        
-        switch lightOn {
-        case true:
-            view.backgroundColor = .white
-            lightButton.setTitle("Off", for: .normal)
-        case false:
-            view.backgroundColor = .black
-            lightButton.setTitle("On", for: .normal)
-        }
+        view.backgroundColor = lightOn ? .white : .black
         
     }
     override func didReceiveMemoryWarning() {

@@ -9,17 +9,44 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var lightOn = true
+    
+    @IBOutlet weak var lightButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Doing additional setup after loading the view
+        
+        updateUI()
     }
-
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        
+        lightOn = !lightOn
+        updateUI()
+        
+    }
+    
+    // it's easier if we put all code that updates view in one method
+    func updateUI() {
+        
+        switch lightOn {
+        case true:
+            view.backgroundColor = .white
+            lightButton.setTitle("Off", for: .normal)
+        case false:
+            view.backgroundColor = .black
+            lightButton.setTitle("On", for: .normal)
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

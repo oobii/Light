@@ -36,9 +36,6 @@
                             <constraint firstItem="8GZ-gg-wv3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aFX-Ny-1D0"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="lightButton" destination="8GZ-gg-wv3" id="tg4-br-8cm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
